@@ -1,3 +1,29 @@
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="container">
+  <form #myForm="ngForm" (ngSubmit)=submitForm(myForm.value)>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <input
+        name="title"
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Title"
+        ngModel
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Content</label
+      >
+      <textarea
+        name="content"
+        ngModel
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+        placeholder="Contents"
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
